@@ -21,12 +21,13 @@ oriel_DBD += base.dbd
 # Include dbd files from all support applications:
 #ifdef ASYN
 oriel_DBD += asyn.dbd
+oriel_DBD += drvAsynSerialPort.dbd
 #endif
 oriel_DBD += motorSupport.dbd
 oriel_DBD += devOriel.dbd
 
 # Add all the support libraries needed by this IOC
-oriel_LIBS += oriel
+oriel_LIBS += Oriel
 oriel_LIBS += motor
 #ifdef ASYN
 oriel_LIBS += asyn

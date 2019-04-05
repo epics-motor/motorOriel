@@ -1,0 +1,6 @@
+file "$(MOTOR)/db/motor.db"
+{
+pattern
+{P,      N,     M,     DTYP,         C, S, DESC,          EGU,    DIR,	VELO, VBAS, ACCL, BDST, BVEL, BACC,  MRES, PREC,   DHLM, DLLM, INIT}
+{oriel:, 1, "m$(N)", "EMC18011",     0, 0, "motor $(N)", microns, Pos,    10,   0.,   1.,   0,    1,    .2,  0.01,   3,  999999,  0.1, ""}
+}
