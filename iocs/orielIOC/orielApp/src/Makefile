@@ -5,6 +5,9 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 #=============================
 
+# The following are used for debugging messages.
+#!USR_CXXFLAGS += -DDEBUG
+
 #=============================
 # Build the IOC application
 
@@ -16,10 +19,21 @@ DBD += oriel.dbd
 oriel_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#oriel_DBD += xxx.dbd
+#ifdef ASYN
+oriel_DBD += asyn.dbd
+#endif
+oriel_DBD += motorSupport.dbd
+oriel_DBD += devOriel.dbd
 
 # Add all the support libraries needed by this IOC
-#oriel_LIBS += xxx
+oriel_LIBS += oriel
+oriel_LIBS += motor
+#ifdef ASYN
+oriel_LIBS += asyn
+#endif
+#ifdef SNCSEQ
+oriel_LIBS += seq pv
+#endif
 
 # oriel_registerRecordDeviceDriver.cpp derives from oriel.dbd
 oriel_SRCS += oriel_registerRecordDeviceDriver.cpp
