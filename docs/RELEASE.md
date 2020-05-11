@@ -1,5 +1,19 @@
 # motorOriel Releases
 
+## __R1-0-1 (2020-05-11)__
+R1-0-1 is a release based on the master branch.  
+
+### Changes since R1-0
+
+#### New features
+* None
+
+#### Modifications to existing features
+* None
+
+#### Bug fixes
+* Commit [9f85ecd](https://github.com/epics-motor/motorOriel/commit/9f85ecde56ce9e8758efba1e0175ef498c4bcaa7): Include ``$(MOTOR)/modules/RELEASE.$(EPICS_HOST_ARCH).local`` instead of ``$(MOTOR)/configure/RELEASE``
+
 ## __R1-0 (2019-04-18)__
 R1-0 is a release based on the master branch.  
 
